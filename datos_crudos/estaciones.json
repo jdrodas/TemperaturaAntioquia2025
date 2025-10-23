@@ -1,0 +1,516 @@
+[{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ed8"
+  },
+  "nombre": "ARAGON",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f12"
+  },
+  "municipio_nombre": "SANTA ROSA DE OSOS",
+  "latitud": 6.78,
+  "longitud": -75.56
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ed9"
+  },
+  "nombre": "LAS BRISAS",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f1e"
+  },
+  "municipio_nombre": "SEGOVIA",
+  "latitud": 7.158805556,
+  "longitud": -74.82183333
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160eda"
+  },
+  "nombre": "SANTA BARBARA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f15"
+  },
+  "municipio_nombre": "SANTA BÁRBARA",
+  "latitud": 5.859583333,
+  "longitud": -75.55627778
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160edb"
+  },
+  "nombre": "GUAYABITO",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f11"
+  },
+  "municipio_nombre": "SANTO DOMINGO",
+  "latitud": 6.540388889,
+  "longitud": -75.14675
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160edc"
+  },
+  "nombre": "MUSINGA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f26"
+  },
+  "municipio_nombre": "FRONTINO",
+  "latitud": 6.777972222,
+  "longitud": -76.20333333
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160edd"
+  },
+  "nombre": "SANTA ISABEL VALDIVIA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f25"
+  },
+  "municipio_nombre": "VALDIVIA",
+  "latitud": 7.157222222,
+  "longitud": -75.442275
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ede"
+  },
+  "nombre": "RETIRO",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f16"
+  },
+  "municipio_nombre": "RETIRO",
+  "latitud": 6.08211,
+  "longitud": -75.56640167
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160edf"
+  },
+  "nombre": "SANTA ELENA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f13"
+  },
+  "municipio_nombre": "MEDELLÍN",
+  "latitud": 6.196888889,
+  "longitud": -75.51675
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee0"
+  },
+  "nombre": "ANGOSTURA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f18"
+  },
+  "municipio_nombre": "ANGOSTURA",
+  "latitud": 6.900555556,
+  "longitud": -75.326019444
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee1"
+  },
+  "nombre": "LA PALMA DE COCO",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f1e"
+  },
+  "municipio_nombre": "SEGOVIA",
+  "latitud": 7.236111111,
+  "longitud": -74.80794444
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee2"
+  },
+  "nombre": "ALTO DE LA CRUZ",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f19"
+  },
+  "municipio_nombre": "AMALFI",
+  "latitud": 6.91,
+  "longitud": -75.078888889
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee3"
+  },
+  "nombre": "TURBO",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f24"
+  },
+  "municipio_nombre": "TURBO",
+  "latitud": 8.091805556,
+  "longitud": -76.71633333
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee4"
+  },
+  "nombre": "ABRIAQUI",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f0a"
+  },
+  "municipio_nombre": "ABRIAQUÍ",
+  "latitud": 6.6363,
+  "longitud": -76.070733333
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee5"
+  },
+  "nombre": "CORRIENTES",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f17"
+  },
+  "municipio_nombre": "SAN VICENTE",
+  "latitud": 6.311944444,
+  "longitud": -75.25355556
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee6"
+  },
+  "nombre": "CAÑASGORDAS",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f05"
+  },
+  "municipio_nombre": "CAÑASGORDAS",
+  "latitud": 6.758027778,
+  "longitud": -76.02966667
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee7"
+  },
+  "nombre": "MACEO",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f14"
+  },
+  "municipio_nombre": "YOLOMBÓ",
+  "latitud": 6.571638889,
+  "longitud": -74.79472222
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee8"
+  },
+  "nombre": "ACUEDUCTO ARMENIA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f1d"
+  },
+  "municipio_nombre": "ARMENIA",
+  "latitud": 6.161666667,
+  "longitud": -75.775805556
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ee9"
+  },
+  "nombre": "GRANJA EXPERIMENTAL EL NUS",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f07"
+  },
+  "municipio_nombre": "SAN ROQUE",
+  "latitud": 6.483583333,
+  "longitud": -74.83669444
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160eea"
+  },
+  "nombre": "LA ESPERANZA RADIO",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f27"
+  },
+  "municipio_nombre": "NECHÍ",
+  "latitud": 8.03,
+  "longitud": -74.79
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160eeb"
+  },
+  "nombre": "AEROPUERTO OTU",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f0b"
+  },
+  "municipio_nombre": "REMEDIOS",
+  "latitud": 7.01175,
+  "longitud": -74.71630556
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160eec"
+  },
+  "nombre": "EL PLAN",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f22"
+  },
+  "municipio_nombre": "FREDONIA",
+  "latitud": 5.924716667,
+  "longitud": -75.667316667
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160eed"
+  },
+  "nombre": "UFRANÁ",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f23"
+  },
+  "municipio_nombre": "TITIRIBÍ",
+  "latitud": 6.085388889,
+  "longitud": -75.811972222
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160eee"
+  },
+  "nombre": "LA SALADA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f1b"
+  },
+  "municipio_nombre": "CALDAS",
+  "latitud": 6.048361111,
+  "longitud": -75.62466667
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160eef"
+  },
+  "nombre": "BOQUERON DE TOYO",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f21"
+  },
+  "municipio_nombre": "GIRALDO",
+  "latitud": 6.699444444,
+  "longitud": -75.9775
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef0"
+  },
+  "nombre": "EL JARDIN CUENCA ALTA RIO RISARALDA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f09"
+  },
+  "municipio_nombre": "JARDÍN",
+  "latitud": 5.593375,
+  "longitud": -75.796397778
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef1"
+  },
+  "nombre": "VEGACHI",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f06"
+  },
+  "municipio_nombre": "VEGACHÍ",
+  "latitud": 6.774111111,
+  "longitud": -74.79652778
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef2"
+  },
+  "nombre": "HACIENDA COTOVE",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f0f"
+  },
+  "municipio_nombre": "SANTA FE DE ANTIOQUIA",
+  "latitud": 6.533916667,
+  "longitud": -75.82733333
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef3"
+  },
+  "nombre": "CAMPO ALEGRE",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f0c"
+  },
+  "municipio_nombre": "DABEIBA",
+  "latitud": 7.026813889,
+  "longitud": -76.252825
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef4"
+  },
+  "nombre": "AEROPUERTO J.M. CORDOVA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f08"
+  },
+  "municipio_nombre": "RIONEGRO",
+  "latitud": 6.1686111,
+  "longitud": -75.426111111
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef5"
+  },
+  "nombre": "NORMAL SANTA TERESA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f26"
+  },
+  "municipio_nombre": "FRONTINO",
+  "latitud": 6.763333333,
+  "longitud": -76.13361111
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef6"
+  },
+  "nombre": "ITUANGO",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f0e"
+  },
+  "municipio_nombre": "ITUANGO",
+  "latitud": 7.161433333,
+  "longitud": -75.762886111
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef7"
+  },
+  "nombre": "SENA - EL BAGRE",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f10"
+  },
+  "municipio_nombre": "EL BAGRE",
+  "latitud": 7.584666667,
+  "longitud": -74.800694444
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef8"
+  },
+  "nombre": "PISTA INDIRA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f24"
+  },
+  "municipio_nombre": "TURBO",
+  "latitud": 7.94075,
+  "longitud": -76.69616667
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160ef9"
+  },
+  "nombre": "SONSON",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f04"
+  },
+  "municipio_nombre": "SONSÓN",
+  "latitud": 5.71525,
+  "longitud": -75.2945
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160efa"
+  },
+  "nombre": "METROMEDELLIN",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f1f"
+  },
+  "municipio_nombre": "BELLO",
+  "latitud": 6.32975,
+  "longitud": -75.55211111
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160efb"
+  },
+  "nombre": "TULENAPA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f20"
+  },
+  "municipio_nombre": "CAREPA",
+  "latitud": 7.77,
+  "longitud": -76.67
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160efc"
+  },
+  "nombre": "HACIENDA TUNEZ",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f22"
+  },
+  "municipio_nombre": "FREDONIA",
+  "latitud": 5.80025,
+  "longitud": -75.65097222
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160efd"
+  },
+  "nombre": "LA SELVA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f08"
+  },
+  "municipio_nombre": "RIONEGRO",
+  "latitud": 6.131916667,
+  "longitud": -75.41455556
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160efe"
+  },
+  "nombre": "MESOPOTAMIA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f1a"
+  },
+  "municipio_nombre": "LA UNIÓN",
+  "latitud": 5.886361111,
+  "longitud": -75.31863889
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160eff"
+  },
+  "nombre": "AEROPUERTO OLAYA HERRERA",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f13"
+  },
+  "municipio_nombre": "MEDELLÍN",
+  "latitud": 6.2246389,
+  "longitud": -75.5882
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160f00"
+  },
+  "nombre": "SAN CARLOS",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f0d"
+  },
+  "municipio_nombre": "SAN CARLOS",
+  "latitud": 6.157666667,
+  "longitud": -75.03891667
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160f01"
+  },
+  "nombre": "AMALFI",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f19"
+  },
+  "municipio_nombre": "AMALFI",
+  "latitud": 6.905555556,
+  "longitud": -75.07722222
+},
+{
+  "_id": {
+    "$oid": "68f95cdef89232c218160f02"
+  },
+  "nombre": "ANORI",
+  "municipio_id": {
+    "$oid": "68f95cebf89232c218160f1c"
+  },
+  "municipio_nombre": "ANORÍ",
+  "latitud": 7.0719,
+  "longitud": -75.1505
+}]

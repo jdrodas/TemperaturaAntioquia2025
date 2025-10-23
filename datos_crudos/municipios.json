@@ -1,0 +1,504 @@
+[{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f04"
+  },
+  "nombre": "SONSÓN",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f05"
+  },
+  "nombre": "CAÑASGORDAS",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af7"
+  },
+  "zona_nombre": "ATRATO - DARIÉN"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f06"
+  },
+  "nombre": "VEGACHÍ",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afa"
+  },
+  "zona_nombre": "MEDIO MAGDALENA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f07"
+  },
+  "nombre": "SAN ROQUE",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afa"
+  },
+  "zona_nombre": "MEDIO MAGDALENA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f08"
+  },
+  "nombre": "RIONEGRO",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afa"
+  },
+  "zona_nombre": "MEDIO MAGDALENA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f09"
+  },
+  "nombre": "JARDÍN",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f0a"
+  },
+  "nombre": "ABRIAQUÍ",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af7"
+  },
+  "zona_nombre": "ATRATO - DARIÉN"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f0b"
+  },
+  "nombre": "REMEDIOS",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afa"
+  },
+  "zona_nombre": "MEDIO MAGDALENA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f0c"
+  },
+  "nombre": "DABEIBA",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af7"
+  },
+  "zona_nombre": "ATRATO - DARIÉN"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f0d"
+  },
+  "nombre": "SAN CARLOS",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afa"
+  },
+  "zona_nombre": "MEDIO MAGDALENA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f0e"
+  },
+  "nombre": "ITUANGO",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f0f"
+  },
+  "nombre": "SANTA FE DE ANTIOQUIA",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f10"
+  },
+  "nombre": "EL BAGRE",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f11"
+  },
+  "nombre": "SANTO DOMINGO",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f12"
+  },
+  "nombre": "SANTA ROSA DE OSOS",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f13"
+  },
+  "nombre": "MEDELLÍN",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f14"
+  },
+  "nombre": "YOLOMBÓ",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afa"
+  },
+  "zona_nombre": "MEDIO MAGDALENA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f15"
+  },
+  "nombre": "SANTA BÁRBARA",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f16"
+  },
+  "nombre": "RETIRO",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afa"
+  },
+  "zona_nombre": "MEDIO MAGDALENA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f17"
+  },
+  "nombre": "SAN VICENTE",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afa"
+  },
+  "zona_nombre": "MEDIO MAGDALENA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f18"
+  },
+  "nombre": "ANGOSTURA",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f19"
+  },
+  "nombre": "AMALFI",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f1a"
+  },
+  "nombre": "LA UNIÓN",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f1b"
+  },
+  "nombre": "CALDAS",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f1c"
+  },
+  "nombre": "ANORÍ",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f1d"
+  },
+  "nombre": "ARMENIA",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f1e"
+  },
+  "nombre": "SEGOVIA",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f1f"
+  },
+  "nombre": "BELLO",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f20"
+  },
+  "nombre": "CAREPA",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af8"
+  },
+  "zona_nombre": "CARIBE - LITORAL"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f21"
+  },
+  "nombre": "GIRALDO",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af7"
+  },
+  "zona_nombre": "ATRATO - DARIÉN"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f22"
+  },
+  "nombre": "FREDONIA",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f23"
+  },
+  "nombre": "TITIRIBÍ",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f24"
+  },
+  "nombre": "TURBO",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af8"
+  },
+  "zona_nombre": "CARIBE - LITORAL"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f25"
+  },
+  "nombre": "VALDIVIA",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af9"
+  },
+  "zona_nombre": "CAUCA"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f26"
+  },
+  "nombre": "FRONTINO",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7af7"
+  },
+  "zona_nombre": "ATRATO - DARIÉN"
+},
+{
+  "_id": {
+    "$oid": "68f95cebf89232c218160f27"
+  },
+  "nombre": "NECHÍ",
+  "departamento_id": {
+    "$oid": "68f95cd5f89232c218160ed6"
+  },
+  "departamento_nombre": "ANTIOQUIA",
+  "zona_id": {
+    "$oid": "68f95d43f89232c2181d7afb"
+  },
+  "zona_nombre": "NECHÍ"
+}]
