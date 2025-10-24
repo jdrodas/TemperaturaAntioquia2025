@@ -440,25 +440,42 @@ db.runCommand({
 -- *****************************************************************
 
 -- Crear la colección mediciones como time series enabled
-db.createCollection(
-    "mediciones",
-    {
-        timeseries: {
-            timeField: "fecha",        // el campo que tiene el dato del tiempo
-            metaField: "estacion_id",  // Campo para indexación eficiente
-            granularity: "minutes"     // Se Ajusta según la frecuencia de los datos
-        }
-    }
-);
+db.createCollection("mediciones", {
+  timeseries: {
+    timeField: "fecha",
+    metaField: "metadata",
+    granularity: "minutes"
+  }
+});
 
--- migrar los datos de la colección estandar
+-- Si se quiere refrescar totalmente
+-- Borrado del contenido de la colección mediciones
+db.mediciones.deleteMany({});
+
+-- Insertar datos transformados
 db.observaciones.aggregate([
-    { $out: "mediciones" }
+  {
+    $project: {
+      fecha: 1,
+      valor: 1,
+      unidad_medida: 1,
+      metadata: {
+        estacion_id: "$estacion_id",
+        estacion_nombre: "$estacion_nombre", 
+        sensor_id: "$sensor_id",
+        sensor_nombre: "$sensor_nombre"
+      }
+    }
+  },
+  { $out: "mediciones" }
 ], { allowDiskUse: true });
 
 -- ****************************************
 --   Zona de peligro
 -- ****************************************
+
+-- Borrado del contenido de la colección mediciones
+db.mediciones.deleteMany({});
 
 -- Borrado de colecciones
 db.mediciones.drop();
