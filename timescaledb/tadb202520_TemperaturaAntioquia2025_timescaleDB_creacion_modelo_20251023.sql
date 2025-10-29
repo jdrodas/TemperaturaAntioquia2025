@@ -14,7 +14,7 @@
 docker pull timescale/timescaledb:latest-pg17
 
 -- Crear el contenedor
-docker run --name tempant_tsdb -e POSTGRES_PASSWORD=unaClav3 -d -p 5432:5432 timescale/timescaledb:latest-pg17
+docker run --name tempant_timescaledb -e POSTGRES_PASSWORD=unaClav3 -d -p 5432:5432 timescale/timescaledb:latest-pg17
 
 -- ***********************************
 -- Abastecimiento de datos
@@ -206,14 +206,21 @@ COMMENT ON COLUMN observaciones.fecha IS 'Fecha y hora en la que se realizó la 
 COMMENT ON COLUMN observaciones.valor IS 'Valor de temperatura obtenido en la observación';
 COMMENT ON COLUMN observaciones.unidad_medida IS 'Unidad de medida de la temperatura observada';
 
--- =====================================
+-- Eliminar registros superiores a Septiembre 30 de 2025
+-- 39 filas afectadas
+
+delete from observaciones
+where fecha >= to_timestamp('2025-10-01','YYYY-MM-DD');
+
+-- =========================================
 -- Convertir a Hypertable de TimescaleDB
--- =====================================
+-- =========================================
 SELECT create_hypertable(
     'observaciones',
     'fecha',
     chunk_time_interval => INTERVAL '1 week',
-    if_not_exists => TRUE
+    if_not_exists => TRUE,
+    migrate_data => TRUE
 );
 
 
@@ -288,103 +295,3 @@ ORDER BY range_start DESC;
 SELECT * FROM timescaledb_information.hypertables
 WHERE hypertable_name = 'observaciones';
 
-
--- ============================================================
--- Continuous Aggregate: Temperaturas Diarias por Estación
--- ============================================================
-
-CREATE MATERIALIZED VIEW mv_temperaturas_diarias
-WITH (timescaledb.continuous) AS
-SELECT 
-    time_bucket('1 day', fecha) AS dia,
-    estacion_id,
-    sensor_id,
-    round(AVG(valor)::numeric,2) AS temp_promedio,
-    MAX(valor) AS temp_maxima,
-    MIN(valor) AS temp_minima,
-    round(STDDEV(valor)::numeric,2) AS temp_desviacion,
-    COUNT(*) AS num_observaciones,
-    -- Primer y última observación del día
-    FIRST(valor, fecha) AS primera_lectura,
-    LAST(valor, fecha) AS ultima_lectura
-FROM observaciones
-GROUP BY dia, estacion_id, sensor_id;
-
-
--- Política de refresh: 
--- actualizar datos de los últimos 7 días, dejando 1 hora de margen
-SELECT add_continuous_aggregate_policy('mv_temperaturas_diarias',
-    start_offset => INTERVAL '7 days',
-    end_offset => INTERVAL '1 hour',
-    schedule_interval => INTERVAL '1 hour');
-
-
-
--- =============================================================
--- Continuous Aggregate: Temperaturas Mensuales por Estación
--- =============================================================
-
-CREATE MATERIALIZED VIEW mv_temperaturas_mensuales
-WITH (timescaledb.continuous) AS
-SELECT 
-    time_bucket('1 month', fecha) AS mes,
-    estacion_id,
-    sensor_id,
-    round(AVG(valor)::numeric,2) AS temp_promedio,
-    MAX(valor) AS temp_maxima,
-    MIN(valor) AS temp_minima,
-    round(STDDEV(valor)::numeric,2) AS temp_desviacion,
-    round((PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY valor))::numeric,2) AS temp_mediana,
-    COUNT(*) AS num_observaciones
-FROM observaciones
-GROUP BY mes, estacion_id, sensor_id;
-
-COMMENT ON VIEW mv_temperaturas_mensuales IS 'Continuous Aggregate: Agregación mensual de temperaturas por estación y sensor';
-
--- Política de refresh: actualizar datos de los últimos 3 meses cada 12 horas
-SELECT add_continuous_aggregate_policy('mv_temperaturas_mensuales',
-    start_offset => INTERVAL '3 months',
-    end_offset => INTERVAL '1 day',
-    schedule_interval => INTERVAL '12 hours');
-
-SELECT
-    mes,
-    estacion_id,
-    temp_promedio,
-    temp_maxima,
-    temp_minima,
-    temp_mediana,
-    num_observaciones
-FROM mv_temperaturas_mensuales
-ORDER BY mes DESC
-LIMIT 10;
-
--- =========================================================
--- Continuous Aggregate: Temperaturas Diarias por Municipio
--- =========================================================
-
-CREATE MATERIALIZED VIEW mv_temperaturas_municipios_diarias
-WITH (timescaledb.continuous) AS
-SELECT 
-    time_bucket('1 day', o.fecha) AS dia,
-    e.municipio_id,
-    round(AVG(o.valor)::numeric,2) AS temp_promedio,
-    MAX(o.valor) AS temp_maxima,
-    MIN(o.valor) AS temp_minima,
-    round(STDDEV(o.valor)::numeric,2) AS temp_desviacion,
-    COUNT(*) AS num_observaciones,
-    COUNT(DISTINCT o.estacion_id) AS num_estaciones
-FROM observaciones o
-JOIN estaciones e ON o.estacion_id = e.id
-GROUP BY dia, e.municipio_id;
-
-COMMENT ON VIEW mv_temperaturas_municipios_diarias IS 'Continuous Aggregate: Agregación diaria de temperaturas por municipio';
-
--- Política de refresh: actualizar datos de los últimos 7 días cada hora
-SELECT add_continuous_aggregate_policy('mv_temperaturas_municipios_diarias',
-    start_offset => INTERVAL '7 days',
-    end_offset => INTERVAL '1 hour',
-    schedule_interval => INTERVAL '1 hour');
-
--- Ver todos los continuous aggregates
-SELECT * FROM timescaledb_information.continuous_aggregates;
