@@ -96,6 +96,33 @@ alter default privileges in schema public grant execute on routines to analisist
 --Privilegios de consulta sobre el esquema information_schema
 grant usage on schema information_schema to analisistemperatura_usr;
 
+-- =========================================
+-- crear el usuario de solo consulta
+-- =========================================
+
+create user analisistemperatura_qry with encrypted password 'unaClav3';
+
+-- asignación de privilegios para el usuario
+grant connect on database analisistemperatura_db to analisistemperatura_qry;
+grant usage on schema public to analisistemperatura_qry;
+
+-- Privilegios sobre tablas existentes
+grant select on all tables in schema public to analisistemperatura_qry;
+
+-- privilegios sobre secuencias existentes
+grant usage, select on all sequences in schema public to analisistemperatura_qry;
+
+-- privilegios sobre funciones existentes
+grant execute on all functions in schema public to analisistemperatura_qry;
+
+-- privilegios sobre procedimientos existentes
+grant execute on all procedures in schema public to analisistemperatura_qry;
+
+-- privilegios sobre objetos futuros
+alter default privileges in schema public grant select on tables TO analisistemperatura_qry;
+alter default privileges in schema public grant execute on routines to analisistemperatura_qry;
+
+
 -- Validar la existencia de la extensión de timeScale
 SELECT distinct extname, extversion
 FROM pg_extension
