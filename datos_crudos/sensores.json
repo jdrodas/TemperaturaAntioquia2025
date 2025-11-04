@@ -1,12 +1,10 @@
-[{
-  "_id": {
-    "$oid": "68f95d3af89232c2181d7af4"
+[
+  {
+    "id": "0071",
+    "nombre": "GPRS - TEMPERATURA DEL AIRE A 2 m"
   },
-  "nombre": "GPRS - TEMPERATURA DEL AIRE A 2 m"
-},
-{
-  "_id": {
-    "$oid": "68f95d3af89232c2181d7af5"
-  },
-  "nombre": "TEMPERATURA DEL AIRE A 2 m"
-}]
+  {
+    "id": "0068",
+    "nombre": "TEMPERATURA DEL AIRE A 2 m"
+  }
+]

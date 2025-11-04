@@ -35,15 +35,13 @@ https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Datos-Hidrometeorol-gi
 Filtros aplicados:
 
 Departamento: Antioquia
-Rango fechas: Enero 1 de 2025, 12:00 am a Octubre 1 2025, 12:00 am.
-Total registros iniciales antes de control de calidad: 557.166 filas.
+Rango fechas: Enero 1 de 2025, 12:00 am a Noviembre 1 2025, 12:00 am.
+Total registros iniciales antes de control de calidad: 625.940 filas.
 
 Importante:
 Los datos aqui expuestos son utilizados con fines académicos. 
 Por favor acceda al recurso relacionado para conocer más información al respecto.
 */
-
-
 
 -- ****************************************
 -- Creación de base de datos y usuarios
@@ -185,7 +183,10 @@ DescripcionSensor text,
 UnidadMedida text
 );
 
--- Luego de cargar datos deben quedar: 557.166 registros
+-- Luego de cargar datos entre Enero 1 y Octubre 1, deben quedar: 557.166 registros
+-- Luego de cargar datos entre Enero 1 y Noviembre 1, deben quedar: 625.940 registros
+
+
 
 -- =====================================
 -- Creación de tablas del modelo
@@ -350,6 +351,9 @@ select distinct
 from datos_provisionales;
 
 --Luego de cargar se identifican 486.346 registros.
+
+-- Luego de cargar datos entre Enero 1 y Octubre 1, se identifican 486.346 registros sin duplicados exactos
+-- Luego de cargar datos entre Enero 1 y Noviembre 1, se identifican 555.120 registros sin duplicados exactos
 
 -- ===========================================
 -- Creación de Vistas

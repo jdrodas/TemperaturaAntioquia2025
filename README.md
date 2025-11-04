@@ -17,8 +17,8 @@ Los datos originales fueron tomados de la Plataforma Nacional de Datos Abiertos 
 Filtros aplicados:
 
 - **Departamento**: Antioquia
-- **Rango fechas**: Enero 1 de 2025, 12:00 am a Octubre 1 2025, 12:00 am.
-- **Total registros iniciales antes de control de calidad**: 557.166 filas.
+- **Rango fechas**: Enero 1 de 2025, 12:00 am a Noviembre 1 2025, 12:00 am.
+- **Total registros iniciales antes de control de calidad**: 625.940 filas.
 
 **Importante**:
 

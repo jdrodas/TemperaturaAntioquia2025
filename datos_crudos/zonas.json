@@ -1,30 +1,22 @@
-[{
-  "_id": {
-    "$oid": "68f95d43f89232c2181d7af7"
+[
+  {
+    "id": 1,
+    "nombre": "MEDIO MAGDALENA"
   },
-  "nombre": "ATRATO - DARIÉN"
-},
-{
-  "_id": {
-    "$oid": "68f95d43f89232c2181d7af8"
+  {
+    "id": 2,
+    "nombre": "CAUCA"
   },
-  "nombre": "CARIBE - LITORAL"
-},
-{
-  "_id": {
-    "$oid": "68f95d43f89232c2181d7af9"
+  {
+    "id": 3,
+    "nombre": "NECHÍ"
   },
-  "nombre": "CAUCA"
-},
-{
-  "_id": {
-    "$oid": "68f95d43f89232c2181d7afa"
+  {
+    "id": 4,
+    "nombre": "CARIBE - LITORAL"
   },
-  "nombre": "MEDIO MAGDALENA"
-},
-{
-  "_id": {
-    "$oid": "68f95d43f89232c2181d7afb"
-  },
-  "nombre": "NECHÍ"
-}]
+  {
+    "id": 5,
+    "nombre": "ATRATO - DARIÉN"
+  }
+]
