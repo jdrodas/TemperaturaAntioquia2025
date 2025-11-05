@@ -35,8 +35,8 @@ https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Datos-Hidrometeorol-gi
 Filtros aplicados:
 
 Departamento: Antioquia
-Rango fechas: Enero 1 de 2025, 12:00 am a Octubre 1 2025, 12:00 am.
-Total registros iniciales antes de control de calidad: 557.166 filas.
+Rango fechas: Enero 1 de 2025, 12:00 am a Noviembre 1 2025, 12:00 am.
+Total registros iniciales antes de control de calidad: 625.940 filas.
 
 Importante:
 Los datos aqui expuestos son utilizados con fines académicos. 
@@ -143,9 +143,9 @@ CREATE TABLE departamentos
     nombre          TEXT NOT NULL CONSTRAINT nombre_departamento_uk UNIQUE
 );
 
-COMMENT ON TABLE departamentos IS 'Departamentos de Colombia';
-COMMENT ON COLUMN departamentos.id IS 'Id del departamento';
-COMMENT ON COLUMN departamentos.nombre IS 'Nombre del departamento';
+comment on table departamentos IS 'Departamentos de Colombia';
+comment on column departamentos.id IS 'Id del departamento';
+comment on column departamentos.nombre IS 'Nombre del departamento';
 
 
 -- Tabla: Zonas
@@ -155,9 +155,9 @@ CREATE TABLE zonas
     nombre          TEXT NOT NULL CONSTRAINT nombre_zona_uk UNIQUE
 );
 
-COMMENT ON TABLE zonas IS 'Zonas Hidrográficas de Colombia';
-COMMENT ON COLUMN zonas.id IS 'Id de la zona';
-COMMENT ON COLUMN zonas.nombre IS 'Nombre de la zona';
+comment on table zonas IS 'Zonas Hidrográficas de Colombia';
+comment on column zonas.id IS 'Id de la zona';
+comment on column zonas.nombre IS 'Nombre de la zona';
 
 
 -- Tabla: Municipios
@@ -170,11 +170,11 @@ CREATE TABLE municipios
     CONSTRAINT nombre_municipio_en_departamento_uk UNIQUE (nombre, departamento_id)
 );
 
-COMMENT ON TABLE municipios IS 'Municipios de Colombia ubicados en departamentos y zonas hidrográficas';
-COMMENT ON COLUMN municipios.id IS 'Id del municipio';
-COMMENT ON COLUMN municipios.nombre IS 'nombre del municipio';
-COMMENT ON COLUMN municipios.departamento_id IS 'Id del departamento al que pertenece el municipio';
-COMMENT ON COLUMN municipios.zona_id IS 'Id de la zona hidrográfica donde está ubicado el municipio';
+comment on table municipios IS 'Municipios de Colombia ubicados en departamentos y zonas hidrográficas';
+comment on column municipios.id IS 'Id del municipio';
+comment on column municipios.nombre IS 'nombre del municipio';
+comment on column municipios.departamento_id IS 'Id del departamento al que pertenece el municipio';
+comment on column municipios.zona_id IS 'Id de la zona hidrográfica donde está ubicado el municipio';
 
 
 -- Tabla: Estaciones
@@ -188,12 +188,12 @@ CREATE TABLE estaciones
     CONSTRAINT ubicacion_estacion_uk UNIQUE (latitud, longitud)
 );
 
-COMMENT ON TABLE estaciones IS 'Estaciones de Medición de Temperatura';
-COMMENT ON COLUMN estaciones.id IS 'Id de la estación';
-COMMENT ON COLUMN estaciones.nombre IS 'nombre de la estación';
-COMMENT ON COLUMN estaciones.municipio_id IS 'Id del municipio donde está la estación';
-COMMENT ON COLUMN estaciones.latitud IS 'Latitud donde está ubicada la estación';
-COMMENT ON COLUMN estaciones.longitud IS 'Longitud donde está ubicada la estación';
+comment on table estaciones IS 'Estaciones de Medición de Temperatura';
+comment on column estaciones.id IS 'Id de la estación';
+comment on column estaciones.nombre IS 'nombre de la estación';
+comment on column estaciones.municipio_id IS 'Id del municipio donde está la estación';
+comment on column estaciones.latitud IS 'Latitud donde está ubicada la estación';
+comment on column estaciones.longitud IS 'Longitud donde está ubicada la estación';
 
 
 -- Tabla: Sensores
@@ -203,41 +203,39 @@ CREATE TABLE sensores
     nombre          TEXT NOT NULL CONSTRAINT nombre_sensor_uk UNIQUE
 );
 
-COMMENT ON TABLE sensores IS 'Sensores de temperatura utilizados para las observaciones de temperatura';
-COMMENT ON COLUMN sensores.id IS 'Id del sensor';
-COMMENT ON COLUMN sensores.nombre IS 'Nombre del sensor';
+comment on table sensores IS 'Sensores de temperatura utilizados para las observaciones de temperatura';
+comment on column sensores.id IS 'Id del sensor';
+comment on column sensores.nombre IS 'Nombre del sensor';
 
 
 -- ====================================================
 -- Tabla: Observaciones (Optimizada para TimescaleDB)
 -- ====================================================
 
-CREATE TABLE observaciones
+create table public.observaciones
 (
-    estacion_id     TEXT NOT NULL,
-    sensor_id       TEXT NOT NULL,
-    fecha           TIMESTAMP WITH TIME ZONE NOT NULL,
-    valor           FLOAT NOT NULL,
-    unidad_medida   TEXT NOT NULL,
-    PRIMARY KEY (estacion_id, sensor_id, fecha),
-    CONSTRAINT observaciones_estaciones_fk FOREIGN KEY (estacion_id) REFERENCES estaciones(id),
-    CONSTRAINT observaciones_sensores_fk FOREIGN KEY (sensor_id) REFERENCES sensores(id)
+    estacion_id   text                     not null constraint observaciones_estaciones_fk references estaciones,
+    sensor_id     text                     not null constraint observaciones_sensores_fk references sensores,
+    fecha         timestamp with time zone not null,
+    valor         float                    not null,
+    unidad_medida text                     not null,
+    constraint observaciones_pk primary key (estacion_id, sensor_id, fecha)
 );
 
-alter table public.observaciones rename constraint observaciones_pkey to observaciones_pk;
+comment on table public.observaciones is 'Observaciones de temperatura realizadas por las estaciones - Hypertable de TimescaleDB';
+comment on column public.observaciones.estacion_id is 'Id de la estación que hizo la observación';
+comment on column public.observaciones.sensor_id is 'Id del sensor con el que se hizo la observación';
+comment on column public.observaciones.fecha is 'Fecha y hora en la que se realizó la observación de temperatura (con zona horaria)';
+comment on column public.observaciones.valor is 'Valor de temperatura obtenido en la observación';
+comment on column public.observaciones.unidad_medida is 'Unidad de medida de la temperatura observada';
 
-COMMENT ON TABLE observaciones IS 'Observaciones de temperatura realizadas por las estaciones - Hypertable de TimescaleDB';
-COMMENT ON COLUMN observaciones.estacion_id IS 'Id de la estación que hizo la observación';
-COMMENT ON COLUMN observaciones.sensor_id IS 'Id del sensor con el que se hizo la observación';
-COMMENT ON COLUMN observaciones.fecha IS 'Fecha y hora en la que se realizó la observación de temperatura (con zona horaria)';
-COMMENT ON COLUMN observaciones.valor IS 'Valor de temperatura obtenido en la observación';
-COMMENT ON COLUMN observaciones.unidad_medida IS 'Unidad de medida de la temperatura observada';
 
--- Eliminar registros superiores a Septiembre 30 de 2025
+
+-- Eliminar registros superiores a Octubre 31 de 2025
 -- 39 filas afectadas
 
 delete from observaciones
-where fecha >= to_timestamp('2025-10-01','YYYY-MM-DD');
+where fecha >= to_timestamp('2025-11-01','YYYY-MM-DD');
 
 -- =========================================
 -- Convertir a Hypertable de TimescaleDB
@@ -322,3 +320,26 @@ ORDER BY range_start DESC;
 SELECT * FROM timescaledb_information.hypertables
 WHERE hypertable_name = 'observaciones';
 
+-- ===========================================
+-- ZONA DE PELIGRO - BORRADO DE OBJETOS
+-- ===========================================
+
+-- Borrado de vistas
+drop materialized view mv_estadisticas_outliers;
+drop view v_ubicacion_estacion;
+drop view v_ubicacion_observacion;
+
+-- Borrado de tablas
+drop table observaciones;
+drop table sensores;
+drop table estaciones;
+drop table municipios;
+drop table zonas;
+drop table departamentos;
+drop table datos_provisionales;
+
+-- Borrado de secuencias
+drop sequence departamentos_id_seq;
+drop sequence municipios_id_seq;
+drop sequence zonas_id_seq;
+drop sequence observaciones_id_seq;
